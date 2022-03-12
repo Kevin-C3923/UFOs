@@ -34,7 +34,8 @@ function updateFilters() {
 
     // 4b. Save the value that was changed as a variable.
     let elementValue = changedElement.property("value");
-    
+    console.log(elementValue);
+
     // 4c. Save the id of the filter that was changed as a variable.
     let filterId = changedElement.attr("id");
     console.log(filterId);
@@ -43,6 +44,7 @@ function updateFilters() {
     // to the filters list. Otherwise, clear that filter from the filters object.
     if(elementValue){
       filters[filterId] = elementValue;
+      console.log(filters);
     }
     else{
       delete filters[filterId];
@@ -57,14 +59,25 @@ function updateFilters() {
   function filterTable() {
   
     // 8. Set the filtered data to the tableData.
-    
-  
-    // 9. Loop through all of the filters and keep any data that
+    let filteredData = tableData;
+    //console.log(filters);
+
+    // 9. Loop through all of the filters and keep any data that 
     // matches the filter values
-    
-  
+    Object.entries(filters).forEach(([key, value]) => {
+      // console.log(key);
+      // console.log(value);
+      let m_keys = key;
+      let title = value;
+
+      if (title) {
+        filteredData = filteredData.filter(row => row[m_keys] === title);
+      };
+     
+    })
+
     // 10. Finally, rebuild the table using the filtered data
-    
+    buildTable(filteredData);
   }
   
   // 2. Attach an event to listen for changes to each filter
