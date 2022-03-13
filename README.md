@@ -8,11 +8,11 @@ The purpose of this analysis was to create an interactive webpage about UFO sigh
 
 When a user starts using the webpage that individual would likely start off using either the Enter State or Enter Country input to see if any UFO sighting as they are very broad and would provide the most information. In this example we use California for Enter State. 
 
-![]( https://github.com/Kevin-C3923/UFOs/tree/main/static/images/state_example.jpg  )
+![]( https://github.com/Kevin-C3923/UFOs/blob/main/static/images/state_example.jpg  )
 
 After the user finds results using either of these two methods, they would get more specific in there selection. Therefor, the user would use the last three inputs, Enter Date, Enter City, or Enter Shape. In this example, we already have California entered but we going to find any results in San Diego for Enter City.
 
-![]( https://github.com/Kevin-C3923/UFOs/tree/main/static/images/city_example.jpg  )
+![]( https://github.com/Kevin-C3923/UFOs/blob/main/static/images/city_example.jpg  )
 
 ### Summary
 
